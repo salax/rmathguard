@@ -11,7 +11,7 @@ module RMathGuard
 			@max_value = options[:max_value] || 10
 			@row_count = options[:row_count] || 5
 			@col_count = options[:col_count] || 3
-			@sep_size  = options[:sep_size]  || 1
+			@sep_size  = options[:sep_size]  || 2
 
 			generate
 		end
@@ -40,7 +40,7 @@ module RMathGuard
 
 		private
 		def generate
-			@operator = %w(* - +)[rand(3)]
+			@operator = %w(- +)[rand(2)]
 			@operand1 = rand(@max_value)
 			@operand2 = rand(@max_value)
 			@result = eval("#{@operand1}#{@operator}#{@operand2}")

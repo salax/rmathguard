@@ -87,43 +87,43 @@ module RMathGuard
 		end
 
     def zero
-			@zero ||= merge(@single_rows.first, @single_rows.last, @single_columns.first, @single_columns.last)
+			merge(@single_rows.first, @single_rows.last, @single_columns.first, @single_columns.last)
 		end
 
 		def one
-			@one ||= @single_columns.last
+			@single_columns.last
 		end
 
 		def two
-			@two ||= merge(@single_rows.first, @single_rows[2], @single_rows.last, @half_columns[:top_right], @half_columns[:bottom_left])
+			merge(@single_rows.first, @single_rows[2], @single_rows.last, @half_columns[:top_right], @half_columns[:bottom_left])
 		end
 
 		def three
-			@three ||= merge(@single_rows.first, @single_rows[2], @single_rows.last, @single_columns.last)
+			merge(@single_rows.first, @single_rows[2], @single_rows.last, @single_columns.last)
 		end
 
 		def four
-			@four ||= merge(@single_rows[2], @single_columns.last, @half_columns[:top_left])
+			merge(@single_rows[2], @single_columns.last, @half_columns[:top_left])
 		end
 
 		def five
-			@five ||= merge(@single_rows.first, @single_rows[2], @single_rows.last, @half_columns[:top_left], @half_columns[:bottom_right])
+			merge(@single_rows.first, @single_rows[2], @single_rows.last, @half_columns[:top_left], @half_columns[:bottom_right])
 		end
 
 		def six
-			@six ||= merge(five, @half_columns[:bottom_left])
+			merge(five, @half_columns[:bottom_left])
 		end
 
 		def seven
-			@seven ||= merge(one, @single_rows.first)
+			merge(one, @single_rows.first)
 		end
 
 		def eight
-			@eight ||= merge(@single_columns.first, three)
+			merge(@single_columns.first, three)
 		end
 
 		def nine
-			@nine ||= merge(five, @half_columns[:top_right])
+			merge(five, @half_columns[:top_right])
 		end
 	end
 end

@@ -6,7 +6,7 @@ module RMathGuard
 			number = self.send(method_name)
 			number.each_index do |row|
 				number[row].each_index do |col|
-					number[row][col] = PATTERN[rand(PATTERN.size)] if number[row][col] == 1
+					number[row][col] = PATTERN[rand(PATTERN.size)] unless number[row][col] == 0
 				end
 			end
 		end

@@ -1,12 +1,11 @@
-require 'rmathguard/mask'
+require 'rmathguard/digit'
 require 'rmathguard/number'
 require 'rmathguard/expression'
 
 module RMathGuard
-	VERSION = "0.0.5"
+	VERSION = "0.1.0"
 end
 
-n = RMathGuard::Number.new
-p n.mask(:one)
-puts
-p n.mask(:eight)
+puts RMathGuard::Expression.new.show
+#p RMathGuard::Numbers::TWO.masked
+#p RMathGuard::Numbers::TWO

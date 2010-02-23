@@ -1,9 +1,8 @@
 module RMathGuard
 	class Expression
-		OPERANDS = %w[zero one two three four five six seven eight nine]
-		OPERATORS = {"*" => :multiply_sign,
-								 "+" => :plus_sign,
-								 "-" => :minus_sign}
+		OPERANDS = %w[ZERO ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE]
+		OPERATORS = {"+" => "PLUS",
+								 "-" => "MINUS"}
 
 		attr_reader :result
 
@@ -17,11 +16,13 @@ module RMathGuard
 		end
 
 		def show
-			n = RMathGuard::Number.new(@row_count, @col_count)
-			op1 = n.send(:mask, OPERANDS[@operand1])
-			op2 = n.send(:mask, OPERANDS[@operand2])
-			sign = n.send(:mask, OPERATORS[@operator])
-			eq = n.mask(:equals_sign)
+			n = RMathGuard::Numbers
+			op1 = n.const_get(OPERANDS[@operand1]).masked
+			op2 = n.const_get(OPERANDS[@operand2]).masked
+      o = RMathGuard::Operators
+			sign = o.const_get(OPERATORS[@operator]).masked
+			eq = o::EQUALS.masked
+
 
 			result = []
 			(0...@row_count).each do |row|

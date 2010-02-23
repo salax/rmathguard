@@ -2,48 +2,44 @@ $:.unshift File.dirname(__FILE__)
 
 require 'spec_helper'
 
-describe RMathGuard::Number do
-	before do
-		@number = RMathGuard::Number.new
-	end
-
+describe RMathGuard::Numbers do
 	it 'should generate number zero' do
-		@number.zero.should be_zero
+		RMathGuard::Numbers::ZERO.should be_zero
 	end
 
 	it 'should generate number one' do
-		@number.one.should be_one
+		RMathGuard::Numbers::ONE.should be_one
 	end
 
 	it 'should generate number two' do
-		@number.two.should be_two
+		RMathGuard::Numbers::TWO.should be_two
 	end
 
 	it 'should generate number three' do
-		@number.three.should be_three
+		RMathGuard::Numbers::THREE.should be_three
 	end
 
 	it 'should generate number four' do
-		@number.four.should be_four
+		RMathGuard::Numbers::FOUR.should be_four
 	end
 
 	it 'should generate number five' do
-		@number.five.should be_five
+		RMathGuard::Numbers::FIVE.should be_five
 	end
 
 	it 'should generate number six' do
-		@number.six.should be_six
+		RMathGuard::Numbers::SIX.should be_six
 	end
 
 	it 'should generate number seven' do
-		@number.seven.should be_seven
+		RMathGuard::Numbers::SEVEN.should be_seven
 	end
 
 	it 'should generate number eight' do
-		@number.eight.should be_eight
+		RMathGuard::Numbers::EIGHT.should be_eight
 	end
 
 	it 'should generate number nine' do
-		@number.nine.should be_nine
+		RMathGuard::Numbers::NINE.should be_nine
 	end
 end

@@ -68,6 +68,11 @@ module BeNumberMatcher
 			@target = target
 			@target.eql?(@expected)
 		end
+
+		def failure_message
+			p @expected
+			p @target
+		end
 	end
 
 	def be_zero

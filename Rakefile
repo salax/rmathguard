@@ -12,7 +12,7 @@ spec = Gem::Specification.new do |s|
 	s.homepage = "http://github.com/salax/rmathguard"
 	s.summary  = ""
 
-	#s.platform = Gem::Platform::RUBY
+	s.platform = Gem::Platform::RUBY
 
 	s.required_rubygems_version = ">= 1.3.1"
 

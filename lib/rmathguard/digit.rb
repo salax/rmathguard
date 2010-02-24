@@ -89,5 +89,9 @@ module RMathGuard
 		def middle
 			self.size / 2
 		end
+
+    def middle_column
+      self.first.size / 2
+    end
 	end
 end

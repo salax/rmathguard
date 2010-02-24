@@ -2,7 +2,7 @@ module RMathGuard
 	class Expression
 		OPERANDS = %w[ZERO ONE TWO THREE FOUR FIVE SIX SEVEN EIGHT NINE]
 		OPERATORS = {"+" => "PLUS",
-								 "-" => "MINUS"}
+      "-" => "MINUS"}
 
 		attr_reader :result
 
@@ -12,6 +12,8 @@ module RMathGuard
 			@col_count = options[:col_count] || 3
 			@sep_size  = options[:sep_size]  || 2
 
+      RMathGuard::Numbers.resize(@row_count, @col_count)
+      RMathGuard::Operators.resize(@row_count, @col_count)
 			generate
 		end
 

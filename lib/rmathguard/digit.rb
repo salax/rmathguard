@@ -32,7 +32,7 @@ module RMathGuard
 			digit.copy(self)
 			digit.each_index do |row|
 				digit[row].each_index do |col|
-					digit[row][col] = PATTERN[rand(PATTERN.size)] unless digit[row][col] == 0
+					digit[row][col] = PATTERN[Kernel::rand(PATTERN.size)] unless digit[row][col] == 0
 				end
 			end
       digit

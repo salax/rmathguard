@@ -9,7 +9,7 @@ module RMathGuard
 		def initialize(options = {})
 			@max_value = options[:max_value] || 10
 			@row_count = options[:row_count] || 5
-			@col_count = options[:col_count] || 3
+			@col_count = options[:col_count] || options[:column_count] || 3
 			@sep_size  = options[:sep_size]  || 2
 
       unless @row_count == 5 && @col_count == 3
@@ -26,7 +26,6 @@ module RMathGuard
       o = RMathGuard::Operators
 			sign = o.const_get(OPERATORS[@operator]).masked
 			eq = o::EQUALS.masked
-
 
 			result = []
 			(0...@row_count).each do |row|

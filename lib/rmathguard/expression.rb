@@ -12,8 +12,10 @@ module RMathGuard
 			@col_count = options[:col_count] || 3
 			@sep_size  = options[:sep_size]  || 2
 
-      RMathGuard::Numbers.resize(@row_count, @col_count)
-      RMathGuard::Operators.resize(@row_count, @col_count)
+      unless @row_count == 5 && @col_count == 3
+        RMathGuard::Numbers.resize(@row_count, @col_count)
+        RMathGuard::Operators.resize(@row_count, @col_count)
+      end
 			generate
 		end
 

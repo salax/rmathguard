@@ -8,10 +8,10 @@ Gem::Specification.new do |s|
   s.authors = ["Jakub Dušek"]
   s.date = %q{2010-02-24}
   s.email = ["jakub.dusek@email.cz"]
-  s.files = ["lib/rmathguard", "lib/rmathguard/mask.rb", "lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard/digit.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.markdown"]
+  s.files = ["lib/rmathguard", "lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard/digit.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.markdown"]
   s.homepage = %q{http://github.com/salax/rmathguard}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{}
 
   if s.respond_to? :specification_version then

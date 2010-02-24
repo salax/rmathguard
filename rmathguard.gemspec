@@ -2,13 +2,13 @@
 
 Gem::Specification.new do |s|
   s.name = %q{rmathguard}
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jakub Dušek"]
   s.date = %q{2010-02-24}
   s.email = ["jakub.dusek@email.cz"]
-  s.files = ["lib/rmathguard", "lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard/digit.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.markdown"]
+  s.files = ["lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard/digit.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.markdown"]
   s.homepage = %q{http://github.com/salax/rmathguard}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}

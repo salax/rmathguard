@@ -11,6 +11,7 @@ module RMathGuard
 			@row_count = options[:row_count] || 5
 			@col_count = options[:col_count] || options[:column_count] || 3
 			@sep_size  = options[:sep_size]  || 2
+      @negative  = options[:negative] || false
 
       unless @row_count == 5 && @col_count == 3
         RMathGuard::Numbers.resize(@row_count, @col_count)
@@ -44,10 +45,12 @@ module RMathGuard
 
 		private
 		def generate
-			@operator = %w(- +)[rand(2)]
-			@operand1 = rand(@max_value)
-			@operand2 = rand(@max_value)
-			@result = eval("#{@operand1}#{@operator}#{@operand2}")
+      begin
+        @operator = %w(- +)[rand(2)]
+        @operand1 = rand(@max_value)
+        @operand2 = rand(@max_value)
+        @result = eval("#{@operand1}#{@operator}#{@operand2}")
+      end until @result >= 0 || @negative
 		end
 	end
 end

@@ -1,5 +1,5 @@
 module RMathGuard
-	module Numbers
+  module Numbers
     extend self
 
     @@rows = 5
@@ -15,49 +15,49 @@ module RMathGuard
     end
 
     def make_zero
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_row :top
         full_row :bottom
         full_column :first
         full_column :last
-			end
+      end
     end
 
     def make_one
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_column :last
-			end
+      end
     end
 
     def make_two
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_row :top
         full_row :middle
         full_row :bottom
         half_column :top_right
         half_column :bottom_left
-			end
+      end
     end
 
     def make_three
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_row :top
         full_row :middle
         full_row :last
         full_column :last
-			end
+      end
     end
 
     def make_four
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         half_column :top_left
         full_row :middle
         full_column :last
-			end
+      end
     end
 
     def make_five
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_row :top
         full_row :middle
         full_row :bottom
@@ -67,28 +67,28 @@ module RMathGuard
     end
 
     def make_six
-			make_five.build do
+      make_five.build do
         full_column :first
-			end
+      end
     end
 
     def make_seven
-			Digit.build(@@rows, @@columns) do
+      Digit.build(@@rows, @@columns) do
         full_row :top
         full_column :last
-			end
+      end
     end
 
     def make_eight
-			make_three.build do
+      make_three.build do
         full_column :first
-			end
+      end
     end
 
     def make_nine
-			make_five.build do
+      make_five.build do
         full_column :last
-			end
+      end
     end
 
     ZERO = make_zero
@@ -101,7 +101,7 @@ module RMathGuard
     SEVEN = make_seven
     EIGHT = make_eight
     NINE = make_nine
-	end
+  end
 
   module Operators
     extend self

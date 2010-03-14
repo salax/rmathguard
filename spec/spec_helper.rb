@@ -5,6 +5,6 @@ require 'rmathguard'
 require 'be_number'
 
 Spec::Runner.configure do |config|
-	config.include(BeNumberMatcher)
+  config.include(BeNumberMatcher)
 end
 

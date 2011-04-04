@@ -1,0 +1,27 @@
+= RMathGuard
+
+Inspired by PHP project {mathguard}[http://www.codegravity.com/projects/mathguard].
+
+== Usage
+
+Generate expression:
+
+  guard = RMathGuard::Expression.new
+  puts  guard.show
+
+  FAT       K1Z
+    8         5  QBZ
+  R7N  21E  JNI
+    F         2  U87
+  CNO       GVO
+  => nil
+
+Show result of expression:
+
+  guard.result
+  => 0
+
+== Integration with Rails
+
+* Rails 2: {salax/rmathguard-rails}[https://github.com/salax/rmathguard-rails]
+* Rails 3: in development

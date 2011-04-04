@@ -6,19 +6,18 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 1.3.1") if s.respond_to? :required_rubygems_version=
   s.authors = ["Jakub Dušek"]
-  s.date = %q{2010-03-14}
+  s.date = %q{2011-04-04}
   s.email = ["jakub.dusek@email.cz"]
-  s.files = ["lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard/digit.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.markdown"]
+  s.files = ["lib/rmathguard/digit.rb", "lib/rmathguard/expression.rb", "lib/rmathguard/number.rb", "lib/rmathguard.rb", "MIT-LICENSE", "README.rdoc"]
   s.homepage = %q{http://github.com/salax/rmathguard}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.6.2}
   s.summary = %q{}
 
   if s.respond_to? :specification_version then
-    current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::RubyGemsVersion) >= Gem::Version.new('1.2.0') then
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
     else
     end
   else
